@@ -1,4 +1,13 @@
-setInterval(update, 30000) // 30s
+window.navigation.addEventListener("navigate", ev => {
+	const url = new URL(ev.destination.url)
+	if (url.protocol !== "https" || url.host !== "youtube.com" || url.pathname !== "/watch") {
+		clearInterval(intervalId)
+		return
+	}
+	intervalId = setInterval(update, 30000) // 30s
+})
+
+let intervalId: number | undefined
 
 function update() {
 	const player = document.querySelector("video")

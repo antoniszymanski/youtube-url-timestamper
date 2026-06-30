@@ -14,7 +14,7 @@ const header = `
 // @author       Antoni Szymański
 // @version      ${version}
 // @license      MPL-2.0
-// @match        https://www.youtube.com/watch*
+// @match        https://www.youtube.com/*
 // ==/UserScript==
 `.trim()
 
