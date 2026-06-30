@@ -11,7 +11,7 @@ let intervalId: number | undefined
 
 function update() {
 	const player = document.querySelector("video")
-	if (player === null) {
+	if (!player) {
 		return
 	}
 	if (Number.isFinite(player.duration) && player.duration <= 600 /* 10 min */) {
