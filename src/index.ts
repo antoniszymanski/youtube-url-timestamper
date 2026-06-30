@@ -31,7 +31,7 @@ function update() {
 	}
 }
 
-function formatTime(time: number): string {
+function formatTime(time: number) {
 	const hours = Math.trunc(time / 3600)
 	const minutes = Math.trunc(time / 60) % 60
 	const seconds = Math.trunc(time % 60)
