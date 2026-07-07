@@ -4,6 +4,7 @@
 import { defineConfig } from "@rspack/cli"
 import { BannerPlugin, Compilation } from "@rspack/core"
 import { TsCheckerRspackPlugin } from "ts-checker-rspack-plugin"
+import { version } from "./package.json"
 
 const header = `
 // ==UserScript==
@@ -11,7 +12,7 @@ const header = `
 // @description  Updates the browser URL with the current timestamp of the YouTube video every 30 seconds
 // @namespace    antoniszymanski
 // @author       Antoni Szymański
-// @version      1.0.0
+// @version      ${version}
 // @license      MPL-2.0
 // @match        https://www.youtube.com/watch*
 // ==/UserScript==
